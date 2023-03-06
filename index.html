@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="./assets/css/res.css">
 </head>
 <body>
-    <main>
-        <header>
-            <div id="logo">
-                <div id="logo_vector">
-                    <img src="./assets/img/logo_vector.png">
-                </div>
-                <div class="heading">Plants</div>
+    <header>
+        <div id="logo">
+            <div id="logo_vector">
+                <img src="./assets/img/logo_vector.png">
             </div>
-            <nav id="navbar">
-                <a href="#welcome">Home</a>
-                <a href="#about">About us</a>
-                <a href="#service">Service</a>
-                <a href="#prices">Price</a>
-                <a href="#contacts">Contacts</a>
-            </nav>
-        </header>
+            <div class="heading">Plants</div>
+        </div>
+        <nav id="navbar">
+            <a href="#welcome">Home</a>
+            <a href="#about">About us</a>
+            <a href="#service">Service</a>
+            <a href="#prices">Price</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+     </header>
+    <main>
         <div id="welcome">    
             <div id="leafs">
                 <img src="./assets/img/leafs.png">
@@ -109,25 +109,30 @@
         </div> 
         <div id="price">
                 <div id="prices">
-                    <div class ="text" style="color: black">Prices</div>
+                    <div class ="text1" style="color: black">Prices</div>
                     <div id="prices_item">
+                    
                         <div class="prices_text">
-                            <p>Basic</p>
-                            <img src="./assets/img/Ellipse 5.png">
+                             <p>Basic</p> 
+                                <img src="./assets/img/Ellipse 5.png">
                         </div>
+                     
                         <div class="prices_text">
                             <p>Standard</p>
-                            <img src="./assets/img/Ellipse 5.png">                        
+                            <img src="./assets/img/Ellipse 5.png">
                         </div>
+                                             
                         <div class="prices_text">
                             <p>Pro care</p>
-                            <img src="./assets/img/Ellipse 5.png">                       
-                        </div>
+                            <img src="./assets/img/Ellipse 5.png">          
+                        </div>                   
                     </div>
                 </div>
                 <div id="leaf_and_text">
                     <div class="text " style="color: black;" >Our best <a style="color: #499A18;">gardeners</a> are ready to help you</div>
-                    <button >Contact us</button>
+                    
+                    <div class="cont"><button  >Contact us</button> 
+                    </div>
                     <img class="leafs_prices" src ="assets/img/leafs prices.png">
                 </div>
         </div>
@@ -139,19 +144,38 @@
                 <img src="./assets/img/Ellipse 5.png"> 
             </div>
         </div>
-        <div id="footer">
-            <div id="footer_data">
-                <a>©</a>
-                <a>2022</a>
-                <a>github</a>
-            </div>
-            <p class ="foot_text">Rolling Scopes School</p>
-            <div id="social_list">
-                <img src="./assets/img/inst 1.png" alt="">
-                <img src="./assets/img/fb 1.png" alt="">
-                <img src="./assets/img/tw 1.png" alt="">
-                <img src="./assets/img/pinterest 1.png" alt="">
-            </div>
         </div>
     </main>
+    <div id="footer">
+        <div id="footer_data">
+            <a>©</a>
+            <a>2022</a>
+            <a>github</a>
+        </div>
+        <p class ="foot_text">Rolling Scopes School</p>
+        <div id="social_list">
+            <img src="./assets/img/inst 1.png" alt="">
+            <img src="./assets/img/fb 1.png" alt="">
+            <img src="./assets/img/tw 1.png" alt="">
+            <img src="./assets/img/pinterest 1.png" alt="">
+        </div>
+<script>
+document.querySelectorAll('.accordion').forEach((el) => {
+    el.addEventListener('click', () => {
+        let content  = el.nextElementSibling;
+        console.log(content)
+
+       if (content.style.maxHeight) {
+        document.querySelectorAll('.content').forEach((el) => el.style.maxHeight = null)
+       } else {
+        document.querySelectorAll('.content').forEach((el) => el.style.maxHeight = null)
+        content.style.maxHeight = content.scrollHeight + 'px'
+       }
+
+    })
+})
+
+</script>    
 </body>
+<script src="./assets/js/script.js"></script>
+</html>
